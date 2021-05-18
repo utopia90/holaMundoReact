@@ -1,3 +1,4 @@
+/* eslint-disable no-const-assign */
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import './Saludo.scss'
@@ -17,20 +18,20 @@ function SaludoF(props) {
   const [logged, setLogged] = useState("logged");
 
   const listaCompra = ["carne", "pescado", "verduras"];
-  const contacto = [{
-    1: {
+  const contacto = [
+    {
       nombre: "Josefa Fernández",
       teléfono: "838492349",
     },
-    2: {
+    {
       nombre: "Carlos Pinto",
       teléfono: "4853459343",
     },
-    3: {
+     {
       nombre: "Sofía Benavente",
       teléfono: "8384283434",
     },
-  }];
+  ];
 
   const aumentarEdad = () => {
     let nuevaEdad = edad + 1;
@@ -38,7 +39,7 @@ function SaludoF(props) {
   };
 
   const changeLogged = () => {
-    let nuevoLogged = logged == "logged" ? "log out" : "logged";
+    let nuevoLogged = logged = "logged" ? "log out" : "logged";
     setLogged(nuevoLogged);
   };
 
